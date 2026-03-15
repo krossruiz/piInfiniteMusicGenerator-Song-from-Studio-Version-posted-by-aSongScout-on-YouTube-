@@ -396,6 +396,17 @@
     font-style: normal;
   }
 
+  .arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 7px;
+    border-color: transparent transparent transparent #c9b458;
+    margin: 0 4px;
+    vertical-align: middle;
+  }
+
   .credit {
     margin-top: 30px;
     color: #4a4a5e;
@@ -651,8 +662,9 @@
   <p class="subtitle">The Infinite Piano of Pi &mdash; A Harmonic Minor</p>
   <p class="happy-pi-day">Happy Pi Day!</p>
   <p class="top-message"></p>
-  <p class="special-thanks">Special thanks to my mother, Maggie, father, Eddie, Kalvin, Zooey and Salma, Андрей, Andrina, Kaleb, Scarlett, Yuri, Hailey, Laura, Jared, Abdiel, Amanda, Gia, Raider, my many students like Manuel, Aram, Serly, Christelle, Sona, Cynthia, Alexa, Mario, and Learn Teach Code Burbank (too many to list!)! Thanks for rmeinding me about Pi Day, June! Hi Krista and Tiffany!</p>
+  <p class="special-thanks">Special thanks to my mother, Maggie, father, Eddie, Kalvin, Zooey and Salma, Андрей, Andrina, Kaleb, Scarlett, Yuri, Hailey, Laura, Jared, Abdiel, Amanda, Gia, Raider, my many students like Manuel, Aram, Serly, Christelle, Sona, Cynthia, Alexa, Mario, and Learn Teach Code Burbank (too many to list!)! Thanks for reminding me about Pi Day, June! Hi Krista and Tiffany!</p>
   <p class="heart">"Take it easy, dude. But, take it!"" -Terrence McKenna </p>
+  <p class="special-thanks">Андрей, Андрей</p>
   <p class="special-thanks">Thanks for getting me moving, Jaszmine 💜</p>
 
   <p class="intro-story">
@@ -712,16 +724,16 @@
       This page will generate new digits of &pi; forever.
     </p>
     <div class="scale-map">
-      <span><em>0</em> &rarr; A3</span>
-      <span><em>1</em> &rarr; B3</span>
-      <span><em>2</em> &rarr; C4</span>
-      <span><em>3</em> &rarr; D4</span>
-      <span><em>4</em> &rarr; E4</span>
-      <span><em>5</em> &rarr; F4</span>
-      <span><em>6</em> &rarr; G#4</span>
-      <span><em>7</em> &rarr; A4</span>
-      <span><em>8</em> &rarr; B4</span>
-      <span><em>9</em> &rarr; C5</span>
+      <span><em>0</em> <span class="arrow"></span>A3</span>
+      <span><em>1</em> <span class="arrow"></span>B3</span>
+      <span><em>2</em> <span class="arrow"></span>C4</span>
+      <span><em>3</em> <span class="arrow"></span>D4</span>
+      <span><em>4</em> <span class="arrow"></span>E4</span>
+      <span><em>5</em> <span class="arrow"></span>F4</span>
+      <span><em>6</em> <span class="arrow"></span>G#4</span>
+      <span><em>7</em> <span class="arrow"></span>A4</span>
+      <span><em>8</em> <span class="arrow"></span>B4</span>
+      <span><em>9</em> <span class="arrow"></span>C5</span>
     </div>
   </div>
 
@@ -847,7 +859,7 @@ Here are some comments from YouTube of a video of a performance of the number pi
         <div class="chat-label user-label">You</div>
         <div class="chat-prompt">Can you format the font-sizes to be a little easier to read? The font-sizes on the top are sort of okay, maybe a little too big, but the ones in the how to section are definitely too small.</div>
         <div class="chat-label claude-label">Claude</div>
-        <div class="chat-response">Scaled down the top messages slightly and bumped up the info/credit sections. Subtitle 2rem &rarr; 1.5rem, info body 0.95rem &rarr; 1.15rem, heading 1.1rem &rarr; 1.4rem.</div>
+        <div class="chat-response">Scaled down the top messages slightly and bumped up the info/credit sections. Subtitle 2rem <span class="arrow"></span>1.5rem, info body 0.95rem <span class="arrow"></span>1.15rem, heading 1.1rem <span class="arrow"></span>1.4rem.</div>
         <div class="chat-label user-label">You</div>
         <div class="chat-prompt">Can you also display the comment thread used? Also, can you use the chat messages from this and the last few Claude Code sessions and display what I prompted in a collapsable chat display, collapsable for each chat?</div>
         <div class="chat-label claude-label">Claude</div>
@@ -888,6 +900,10 @@ Here are some comments from YouTube of a video of a performance of the number pi
         <div class="chat-prompt">Try to replace the emojis with non-emoji elements, except for the purple heart.</div>
         <div class="chat-label claude-label">Claude</div>
         <div class="chat-response">Replaced the Unicode play/pause symbols (&#9654;/&#9208;) with pure CSS shapes &mdash; a CSS triangle for play and CSS border bars for pause. They inherit the button's gold color automatically. The purple heart was the only other emoji and stays as-is.</div>
+        <div class="chat-label user-label">You</div>
+        <div class="chat-prompt">Replace the unicode arrows in the chat logs with the one you used for the play button. Update the chat logs like you have before too.</div>
+        <div class="chat-label claude-label">Claude</div>
+        <div class="chat-response">Replaced all &rarr; (right arrow) characters with a small CSS triangle matching the play button style and the site's gold color. Added an .arrow class for the inline triangles.</div>
       </details>
     </div>
   </details>
